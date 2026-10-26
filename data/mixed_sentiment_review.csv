@@ -1,0 +1,7 @@
+﻿text,sentiment,category,review_status,approved_sentiment
+Product acha hai lekin delivery bohat late thi,neutral,Mixed - review,REVIEW_REQUIRED,negative
+Quality excellent hai but price bohat zyada hai,neutral,Mixed - review,REVIEW_REQUIRED,negative
+Food tasty tha lekin service bohat slow thi,neutral,Mixed - review,REVIEW_REQUIRED,positive
+Phone fast hai but battery jaldi khatam hoti hai,neutral,Mixed - review,REVIEW_REQUIRED,negative
+Staff helpful tha lekin mera issue solve nahi hua,neutral,Mixed - review,REVIEW_REQUIRED,negative
+"Product acha tha, lekin mujhe dobara khareedna nahi hai",negative,Mixed - review,REVIEW_REQUIRED,negative

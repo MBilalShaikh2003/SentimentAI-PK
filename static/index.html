@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SentimentAI PK | Sentiment Analyzer</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="page-container">
+
+        <header class="site-header">
+            <div class="logo">S<span>AI</span></div>
+            <div class="brand-name">SentimentAI <span>PK</span></div>
+            <div class="status">
+                <span class="status-dot"></span>
+                AI Analyzer
+            </div>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">ROMAN URDU • ENGLISH • NLP</p>
+
+            <h1>Understand the <span>feeling</span><br>behind every word.</h1>
+
+            <p class="hero-description">
+                Apna comment enter karein aur AI se jaanen ke sentiment
+                positive, negative, ya neutral hai.
+            </p>
+        </section>
+
+        <section class="analyzer-card">
+            <div class="card-heading">
+                <div>
+                    <h2>Analyze your text</h2>
+                    <p>Enter a comment below to get started.</p>
+                </div>
+                <span class="sparkle">✳</span>
+            </div>
+
+            <form id="sentiment-form">
+                <label for="comment-input">Your comment</label>
+
+                <textarea
+                    id="comment-input"
+                    name="text"
+                    rows="5"
+                    maxlength="2000"
+                    placeholder="Example: Yeh product bohat acha hai..."
+                    required
+                ></textarea>
+
+                <div class="input-footer">
+                    <span>Roman Urdu ya English mein likhein</span>
+                    <span id="character-count">0 / 2000</span>
+                </div>
+
+                <button id="analyze-button" type="submit">
+                    <span id="button-text">Analyze Sentiment</span>
+                    <span aria-hidden="true">→</span>
+                </button>
+
+                <p id="error-message" class="error-message" role="alert" hidden></p>
+            </form>
+
+            <section id="result-section" class="result-section" hidden>
+                <div class="result-divider"></div>
+
+                <p class="result-label">ANALYSIS RESULT</p>
+
+                <div class="result-heading">
+                    <div>
+                        <p class="result-caption">Predicted sentiment</p>
+                        <h2 id="sentiment-result">Positive</h2>
+                    </div>
+                    <div id="sentiment-icon" class="sentiment-icon">☺</div>
+                </div>
+
+                <p class="scores-heading">Confidence scores</p>
+
+                <div class="score-row">
+                    <div class="score-info">
+                        <span>Positive</span>
+                        <span id="positive-score">0%</span>
+                    </div>
+                    <div class="score-track">
+                        <div id="positive-bar" class="score-fill positive-fill"></div>
+                    </div>
+                </div>
+
+                <div class="score-row">
+                    <div class="score-info">
+                        <span>Neutral</span>
+                        <span id="neutral-score">0%</span>
+                    </div>
+                    <div class="score-track">
+                        <div id="neutral-bar" class="score-fill neutral-fill"></div>
+                    </div>
+                </div>
+
+                <div class="score-row">
+                    <div class="score-info">
+                        <span>Negative</span>
+                        <span id="negative-score">0%</span>
+                    </div>
+                    <div class="score-track">
+                        <div id="negative-bar" class="score-fill negative-fill"></div>
+                    </div>
+                </div>
+
+                <p class="result-note">
+                    Scores model ki estimated probabilities hain, guaranteed
+                    correctness nahi.
+                </p>
+            </section>
+        </section>
+
+        <footer class="site-footer">
+            <p>Built with Python, FastAPI &amp; Machine Learning</p>
+            <p>SentimentAI PK · NLP Project</p>
+        </footer>
+
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
